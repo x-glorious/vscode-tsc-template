@@ -1,0 +1,28 @@
+{
+    "name": "node-js-with-ts",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "debug-clear": "rm -rf public/development/ && mkdir -p public/development/ && cp package.json public/development/package.json",
+        "dev": "npm run debug-clear && ./node_modules/.bin/tsc --watch --sourceMap --outDir ./public/development/src",
+        "build-clear": "rm -rf public/production/ && mkdir -p public/production/ && cp package.json public/production/package.json",
+        "build": "npm run build-clear && ./node_modules/.bin/tsc --outDir ./public/production/src"
+    },
+    "author": "xuhuihuang",
+    "license": "ISC",
+    "dependencies": {
+        "@types/module-alias": "^2.0.0",
+        "@types/node": "^13.1.0",
+        "cross-env": "^6.0.3",
+        "module-alias": "^2.2.2",
+        "typescript": "^3.7.4"
+    },
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^2.13.0",
+        "@typescript-eslint/parser": "^2.13.0",
+        "eslint": "^6.8.0",
+        "prettier": "^1.19.1"
+    }
+}
