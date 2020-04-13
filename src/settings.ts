@@ -1,3 +1,9 @@
+interface ITokenSetting {
+    cookieName: string
+    expiresIn: string
+    algorithm: 'HS256'
+}
+
 export default {
     dbName: 'chickenStudy',
     userName: 'root',
@@ -46,5 +52,5 @@ export default {
          * 加密算法
          */
         algorithm: 'HS256'
-    }
+    } as ITokenSetting
 }
